@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <ul class="laguage">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+// function addLanguage(name){
+// const li =document.createElement("li")
+// console.log(li);
+// li.innerText=name
+// const laguage=document.querySelector(".laguage")
+// laguage.appendChild(li)
+// }
+// addLanguage("python")
+// addLanguage("java")
+
+//or
+// optimize 
+function addoptimize(name){
+    const li=document.createElement("li")
+    // console.log(li)
+    const text=document.createTextNode(name)
+    li.appendChild(text)
+    const lang=document.querySelector(".laguage")
+    lang.appendChild(li)
+}
+addoptimize("python")
+addoptimize("python")
+
+//Edit
+const first= document.querySelector("li:nth-child(2)")
+// console.log(first);
+const newli=document.createElement("li")
+newli.textContent="mojo"
+first.replaceWith(newli)
+
+//edit
+const sec=document.querySelector("li:last-child")
+sec.outerHTML="<li>C++</li>"
+
+//remove
+const last=document.querySelector("li:last-child")
+last.remove()
+
+</script>
+</html>
